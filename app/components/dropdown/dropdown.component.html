@@ -1,0 +1,9 @@
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-{{dropDownId}}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" (click)="openDropDown($event)">
+        {{defItem.text}}
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdown-1" #dropdownmenu style="height:200px;overflow: auto">
+        <li *ngFor="let item of items" (click)="itemClicked(item)"><a >{{item.text}}</a></li>
+    </ul>
+</div>

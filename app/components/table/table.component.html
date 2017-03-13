@@ -1,0 +1,17 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th *ngFor="let h of tableHeader">{{h.title}}</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <div [hidden]="tableBody.length > 0">
+            <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+        </div>
+
+        <tr *ngFor="let row of tableBody" [hidden]="tableBody.length === 0">
+            <td *ngFor=" let cell of row">{{cell}}</td>
+        </tr>
+    </tbody>
+</table>
